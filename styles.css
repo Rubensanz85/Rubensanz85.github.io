@@ -545,49 +545,6 @@ body {
 }
 
 
-/* Media Queries */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    header ul {
-        flex-direction: column;
-        gap: 1rem;
-        width: 100%;
-        display: none;
-    }
-
-    header ul.show {
-        display: flex;
-    }
-
-    #btn {
-        display: block;
-        background: none;
-        border: none;
-        color: white;
-        font-size: 1.5rem;
-        cursor: pointer;
-    }
-
-    #inicio {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .s-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .profile-pic {
-        width: 200px;
-        height: 200px;
-    }
-}
 /* Estilo para el botón de regresar al inicio */
 .scroll-to-top {
     position: fixed;
@@ -616,4 +573,49 @@ body {
 
 .scroll-to-top i {
     margin: 0;
+}
+
+
+/* Estilo para pantallas 480px */
+
+/* Estilo para dispositivos Móviles (320px - 480px) */
+/* Estilo para escritorios Pequeños (769px - 1024px) */
+/* Estilo para dispositivos Móviles (320px - 480px) */
+/* Estilo para dispositivos Móviles (320px - 480px) */
+/* Menú Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Oculta el menú de enlaces en pantallas pequeñas */
+        position: absolute;
+        top: 60px; /* Asegura que el menú se despliegue debajo del header */
+        left: 0;
+        width: 100%;
+        background: var(--dark-bg);
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem;
+        border-radius: 0 0 8px 8px;
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex; /* Muestra el menú cuando tiene la clase 'active' */
+    }
+
+    #btn {
+        display: block; /* Muestra el botón en pantallas pequeñas */
+        background: var(--blue);
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 20px;
+        border-radius: 5px;
+        transition: background .3s ease-in;
+    }
+
+    #btn:hover {
+        background: var(--dark-bg);
+    }
 }
