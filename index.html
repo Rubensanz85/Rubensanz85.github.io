@@ -12,6 +12,7 @@
     <header>
         <nav>
             <h1 class="animate-title">Portafolio Digital</h1>
+            <button id="btn"><i class="fas fa-bars"></i></button>
             <div class="nav-links">
                 <ul>
                     <li><a href="#inicio">Inicio</a></li>
@@ -20,7 +21,6 @@
                     <li><a href="#conocimientos-tecnicos">Conocimientos Técnicos</a></li>
                     <li><a href="#proyectos">Proyectos</a></li>
                 </ul>
-                <button id="btn" onclick="showList()"><i class="fas fa-bars"></i></button>
             </div>
         </nav>
     </header>
@@ -36,7 +36,6 @@
                     <a href="#sobre-mi" class="btn saber-mas">
                         <button>Saber Más</button>
                     </a>
-    
                 </div>
             </div>
             <img src="Imagenes/pfp.jpg" alt="Foto de perfil" class="profile-pic">
@@ -82,6 +81,7 @@
             </div>
         </div>
     </section>
+
 
     <section id="conocimientos-tecnicos" class="technical-skills">
         <h2>Conocimientos Técnicos</h2>
@@ -295,5 +295,15 @@
                 });
             });
         </script>        
-    </body>
-    </html>
+        <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('btn');
+            const navLinks = document.querySelector('.nav-links');
+        
+            btn.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        });
+    </script>        
+</body>
+</html>
